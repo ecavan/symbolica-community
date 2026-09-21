@@ -82,6 +82,7 @@ fn core(m: &Bound<'_, PyModule>) -> PyResult<()> {
     register_module!(m, example_extension::CommunityModule);
     register_module!(m, spynso3::SpensoModule);
     register_module!(m, hep::HepModule);
+    register_module!(m, oneloopreduce_python::CommunityModule);
     #[cfg(not(target_arch = "wasm32"))]
     {
         register_module!(m, vakint::symbolica_community_module::VakintWrapper);
