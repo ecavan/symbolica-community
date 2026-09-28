@@ -125,7 +125,7 @@ def test_numerator_degree_bound_is_an_error():
     family = oneloop.IntegralFamily(
         [oneloop.Propagator(E("1"))], [], numerator=dot(k, k) ** 21,
     )
-    with pytest.raises(ValueError, match="exceeds the supported bound"):
+    with pytest.raises(ValueError, match="exceeds the bound"):
         family.reduce()
 
 
@@ -143,12 +143,12 @@ def test_external_prefactors_stay_valid():
 def test_internal_names_are_rejected(name):
     reserved = S(f"oneloopreduce::{name}")
     family = oneloop.IntegralFamily([oneloop.Propagator(reserved)] * 2, [E("0")])
-    with pytest.raises(ValueError, match="uses internally"):
+    with pytest.raises(ValueError, match="reserved"):
         family.reduce()
     family = oneloop.IntegralFamily(
         [oneloop.Propagator(E("1"))], [], numerator=reserved,
     )
-    with pytest.raises(ValueError, match="uses internally"):
+    with pytest.raises(ValueError, match="reserved"):
         family.reduce()
 
 
