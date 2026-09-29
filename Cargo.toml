@@ -51,7 +51,7 @@ idenso = { git = "https://github.com/alphal00p/gammaloop", branch = "feynkit", d
 spynso3 = { git = "https://github.com/alphal00p/gammaloop", branch = "feynkit", default-features = false }
 # Aggregates the cff, generator, graph, tensor, model, and kinematics bindings.
 feynkit-py = { git = "https://github.com/alphal00p/gammaloop", branch = "feynkit", default-features = false, features = ["ufo"] }
-one-loop-reduce-python = { git = "https://github.com/ecavan/one-loop-reduce", rev = "bbb2b5caa8a2ce06b84fdbbe9773f2435a42c703", default-features = false }
+one-loop-reduce-python = { git = "https://github.com/ecavan/one-loop-reduce", rev = "2702deec0de375a2030d7e8da8feef255869cfa8", default-features = false }
 symbolica = { version = "3.0", default-features = false, features = ["python_export"] }
 symbolica-integrate = { version = "2.0.1", default-features = false, features = ["compressed-step-metadata"] }
 pyo3 = { version = "0.28" }

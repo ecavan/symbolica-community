@@ -1,5 +1,5 @@
-//! Expose the complete FeynKit Python API in one community namespace, with
-//! symbolic one-loop reduction under `hep.oneloop`.
+//! Expose the complete FeynKit Python API in one community namespace, and
+//! one-loop reduction as `hep.oneloop`.
 
 use pyo3::{
     Bound, PyResult, Python,
@@ -32,14 +32,12 @@ impl SymbolicaCommunityModule for HepModule {
 
     fn initialize(py: Python<'_>) -> PyResult<()> {
         feynkit_py::FeynkitModule::initialize(py)?;
-        // Registers `oneloopreduce::dot` with its `Symmetric, Linear` attributes
-        // before user code can mention it and fix them to the defaults.
+        // Gives `oneloopreduce::dot` its attributes before user code can create it.
         oneloopreduce_python::CommunityModule::initialize(py)
     }
 }
 
-/// Add the one-loop reducer as the `symbolica.community.hep.oneloop` submodule,
-/// the module name its classes declare.
+/// The reducer's classes declare `symbolica.community.hep.oneloop`.
 fn register_oneloop(hep: &Bound<'_, PyModule>) -> PyResult<()> {
     let name = "symbolica.community.hep.oneloop";
     let oneloop = PyModule::new(hep.py(), name)?;

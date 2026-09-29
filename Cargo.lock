@@ -1993,7 +1993,7 @@ checksum = "384b8ab6d37215f3c5301a95a4accb5d64aa607f1fcb26a11b5303878451b4fe"
 [[package]]
 name = "one-loop-reduce"
 version = "0.1.0"
-source = "git+https://github.com/ecavan/one-loop-reduce?rev=bbb2b5caa8a2ce06b84fdbbe9773f2435a42c703#bbb2b5caa8a2ce06b84fdbbe9773f2435a42c703"
+source = "git+https://github.com/ecavan/one-loop-reduce?rev=2702deec0de375a2030d7e8da8feef255869cfa8#2702deec0de375a2030d7e8da8feef255869cfa8"
 dependencies = [
  "symbolica",
  "thiserror",
@@ -2002,7 +2002,7 @@ dependencies = [
 [[package]]
 name = "one-loop-reduce-python"
 version = "0.1.0"
-source = "git+https://github.com/ecavan/one-loop-reduce?rev=bbb2b5caa8a2ce06b84fdbbe9773f2435a42c703#bbb2b5caa8a2ce06b84fdbbe9773f2435a42c703"
+source = "git+https://github.com/ecavan/one-loop-reduce?rev=2702deec0de375a2030d7e8da8feef255869cfa8#2702deec0de375a2030d7e8da8feef255869cfa8"
 dependencies = [
  "one-loop-reduce",
  "pyo3",
