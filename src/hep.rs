@@ -37,7 +37,7 @@ impl SymbolicaCommunityModule for HepModule {
     }
 }
 
-/// The reducer's classes declare `symbolica.community.hep.oneloop`.
+/// Add the reducer as the submodule `hep.oneloop`, the name its classes declare.
 fn register_oneloop(hep: &Bound<'_, PyModule>) -> PyResult<()> {
     let name = "symbolica.community.hep.oneloop";
     let oneloop = PyModule::new(hep.py(), name)?;
